@@ -7,7 +7,7 @@ import Routers from "../routes/Routers";
 const Layout = () => {
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <main>
         <Routers />
       </main>

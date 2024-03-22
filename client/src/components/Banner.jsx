@@ -71,14 +71,14 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
 
     return (
         <div className='w-[70%] mx-auto'>
-            <div className='grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 m-auto mt-3'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-2 m-auto mt-3'>
                 {products.map((product, index) => (
                     <div key={index} style={{ background: product.gradient }} className='h-fit xl:h-[220px] w-fit xl:w-[600px] mx-auto my-auto p-2 xl:p-6 mb-5 rounded-lg'>
                         <div className='flex md:flex-row flex-col justify-between items-center'>
                             <div>
                                 <h1 className='font-bold text-2xl'>{product.title}</h1>
-                                <p>Starting at <span className='font-bold'>${product.startingPrice}</span></p>
-                                <button className='bg-black px-6 py-2log rounded-lg text-white w-fit h-fit mt-4'>Explore more</button>
+                                <p className='mt-2 text-lg'>Starting at <span className='font-bold'>${product.startingPrice}</span></p>
+                                <button className='bg-black px-7 py-2 log rounded-lg text-white w-fit h-fit mt-4'>Explore more</button>
                             </div>
                             <div>
                                 <img src={product.imageUrl} alt={product.title} className="max-h-40" />
@@ -87,15 +87,15 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                     </div>
                 ))}
             </div>
-            <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto my-6'>
-                <div className='bg-yellow-50 border-2 border-yellow-200 p-4 w-auto  xl:w-full rounded-lg mx-auto shadow-md'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 m-auto my-6'>
+                <div style={{ backgroundColor: 'rgb(255, 253, 236)', border: '2px solid rgb(243, 241, 222)' }} className='bg-yellow-50 h-fit  border-2 border-yellow-200 p-8 w-full rounded-lg mx-auto shadow-md'>
                     <h2 className="text-2xl font-semibold mb-4 text-center">Reviews & Ratings</h2>
-                    <div className='flex xl:flex-row flex-col bg-yellow-100 xl:rounded-full p-4 mb-4 justify-between'>
+                    <div style={{ backgroundColor: 'rgb(255, 242, 205)' }} className='flex xl:flex-row flex-col xl:rounded-full p-4 mb-4 xl:justify-start justify-center'>
                         <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center font-bold">
                             <span className="font-bold text-black text-2xl font bold">YOT <br />PO.</span>
                         </div>
-                        <div className='flex justify-around mr-20'>
-                            <div className="flex-col space-x-3 items-start mx-auto">
+                        <div className='xl:flex flex-row justify-around mr-20 items-center'>
+                            <div className="flex-col items-start mx-4">
                                 <div>
                                     <span className="text-3xl font-bold">71534</span>
                                 </div>
@@ -104,7 +104,7 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                                 </div>
                             </div>
                             <div className="flex-col items-center mx-auto">
-                                <div className='flex'>
+                                <div className='flex items-center'>
                                     <span className="text-3xl font-bold text-yellow-500">4.5</span>
                                     <div className="flex text-yellow-500 text-xl">
                                         <FaStar />
@@ -120,9 +120,9 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 m-auto my-6 items-center">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 m-auto my-6 items-start xl:items-center">
                         <div className="flex text-center mx-auto items-center">
-                            <div className="w-16 h-16 rounded-full border-4 border-green-400 text-green-400 flex mt-2 items-center justify-center font-bold">
+                            <div className="w-16 h-16 bg-white rounded-full border-4 border-green-400 text-green-400 flex mt-2 items-center justify-center font-bold">
                                 100%
                             </div>
                             <div>
@@ -130,7 +130,7 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                             </div>
                         </div>
                         <div className="flex text-center mx-auto items-center">
-                            <div className="w-16 h-16 rounded-full border-4 border-green-400 text-green-400 mt-2 flex items-center justify-center font-bold">
+                            <div className="w-16 h-16 bg-white rounded-full border-4 border-green-400 text-green-400 mt-2 flex items-center justify-center font-bold">
                                 95%
                             </div>
                             <div>
@@ -138,7 +138,7 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                             </div>
                         </div>
                         <div className="flex text-center mx-auto items-center">
-                            <div className="w-16 h-16 rounded-full border-4 border-green-400 text-green-400 mt-2 flex items-center justify-center font-bold">
+                            <div className="w-16 h-16 bg-white rounded-full border-4 border-green-400 text-green-400 mt-2 flex items-center justify-center font-bold">
                                 100%
                             </div>
                             <div>
@@ -147,12 +147,12 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-gray-100 border-gray-200 border-2 rounded-lg p-4 shadow-md w-full'>
-                    <h2 className="text-2xl font-semibold mb-4 text-center">Our customers speak for us!</h2>
-                    <div className="slider-container">
+                <div className='bg-gray-100 border-gray-200 h-fit border-2 rounded-lg p-8 shadow-md w-full'>
+                    <h2 className="text-2xl font-semibold  text-center">Our customers speak for us!</h2>
+                    <div className="slider-container my-4">
                         <Slider {...settings}>
                             {testimonials.map((testimonial, index) => (
-                                <div key={index} className="p-4">
+                                <div key={index} className="">
                                     <p className="text-gray-600 mb-4">{testimonial.content}</p>
                                     <div className="flex items-center justify-center mb-7">
                                         <div className="flex-shrink-0 mr-4">
@@ -162,15 +162,16 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                                         </div>
                                         <div>
                                             <p className="font-semibold">{testimonial.author}</p>
-                                            <div className="flex text-yellow-500">
-                                                {/* Assume 5 stars for each testimonial for this example */}
-                                                <FaStar />
-                                                <FaStar />
-                                                <FaStar />
-                                                <FaStar />
-                                                <FaStar />
+                                            <div className='flex'>
+                                                <div className="flex text-yellow-500">
+                                                    <FaStar />
+                                                    <FaStar />
+                                                    <FaStar />
+                                                    <FaStar />
+                                                    <FaStar />
+                                                </div>
+                                                <p className="text-gray-500 text-sm ml-2">{testimonial.date}</p>
                                             </div>
-                                            <p className="text-gray-500 text-sm">{testimonial.date}</p>
                                         </div>
                                     </div>
                                 </div>
