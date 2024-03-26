@@ -1,6 +1,11 @@
 import React from 'react'
 import Banner from '../components/Banner'
 import Blog from '../components/Blog'
+import Home_needs from '../components/Home_needs'
+import Best_sellers from '../components/Best_sellers'
+import Product from '../components/Product'
+import New_arrivals from '../components/New_arrivals'
+
 
 const Home = () => {
   return (
@@ -20,8 +25,12 @@ const Home = () => {
           </div>
         </div>
       </div> */}
-      <Banner/>
-      <Blog/>
+       <Product/>
+      <Home_needs />
+      <Best_sellers />
+      <New_arrivals/>
+      <Banner />
+      <Blog />
     </div>
   )
 }

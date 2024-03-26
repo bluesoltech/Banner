@@ -71,14 +71,14 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
 
     return (
         <div className='w-[70%] mx-auto'>
-            <div className='grid sm:grid-cols-1 lg:grid-cols-2 m-auto mt-3'>
+            <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-6 m-auto mt-3'>
                 {products.map((product, index) => (
-                    <div key={index} style={{ background: product.gradient }} className='h-fit xl:h-[220px] w-fit xl:w-[600px] mx-auto my-auto p-2 xl:p-6 mb-5 rounded-lg'>
+                    <div key={index} style={{ background: product.gradient }} className='h-fit xl:h-[220px] w-fit xl:w-[650px] mx-auto my-auto p-2 xl:p-6 mb-5 rounded-lg'>
                         <div className='flex md:flex-row flex-col justify-between items-center'>
                             <div>
                                 <h1 className='font-bold text-2xl'>{product.title}</h1>
                                 <p className='mt-2 text-lg'>Starting at <span className='font-bold'>${product.startingPrice}</span></p>
-                                <button className='bg-black px-7 py-2 log rounded-lg text-white w-fit h-fit mt-4'>Explore more</button>
+                                <button className='bg-black px-7 py-2  rounded-lg text-white w-fit h-fit mt-4'>Explore more</button>
                             </div>
                             <div>
                                 <img src={product.imageUrl} alt={product.title} className="max-h-40" />
@@ -87,8 +87,8 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                     </div>
                 ))}
             </div>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 m-auto my-6'>
-                <div style={{ backgroundColor: 'rgb(255, 253, 236)', border: '2px solid rgb(243, 241, 222)' }} className='bg-yellow-50 h-fit  border-2 border-yellow-200 p-8 w-full rounded-lg mx-auto shadow-md'>
+            <div className='grid xl:grid-cols-2 grid-cols-1 gap-6 m-auto my-6'>
+                <div style={{ backgroundColor: 'rgb(255, 253, 236)', border: '2px solid rgb(243, 241, 222)' }} className='bg-yellow-50 h-fit border-2 border-yellow-200 p-8 w-full rounded-lg mx-auto shadow-md'>
                     <h2 className="text-2xl font-semibold mb-4 text-center">Reviews & Ratings</h2>
                     <div style={{ backgroundColor: 'rgb(255, 242, 205)' }} className='flex xl:flex-row flex-col xl:rounded-full p-4 mb-4 xl:justify-start justify-center'>
                         <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center font-bold">
@@ -147,7 +147,7 @@ const Banner = ({ title, startingPrice, imageUrl, bgColorClass }) => {
                         </div>
                     </div>
                 </div>
-                <div className='bg-gray-100 border-gray-200 h-fit border-2 rounded-lg p-8 shadow-md w-full'>
+                <div className='bg-white border-gray-200 h-fit border-2 rounded-lg p-8 shadow-md w-full mx-auto'>
                     <h2 className="text-2xl font-semibold  text-center">Our customers speak for us!</h2>
                     <div className="slider-container my-4">
                         <Slider {...settings}>

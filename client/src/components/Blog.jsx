@@ -9,7 +9,7 @@ const Blog = () => {
     };
     return (
         <div className='w-[70%] mx-auto'>
-            <div className="p-4 bg-slate-100 full f-fit rounded-lg">
+            <div className="p-4 bg-slate-50 full f-fit rounded-lg">
                 <h1 className="text-black font-2xl font-bold">
                     Buy Customizable Signs/Banners with Free Design Templates & 24/7 Support
                 </h1>
@@ -37,7 +37,7 @@ const Blog = () => {
                 </button>
             </div>
             <div className=" grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 m-auto my-6">
-                <div className="flex flex-col items-center text-center px-5 border-hidden xl:border-gray-200 xl:border-r-2">
+                <div className="flex flex-col items-center text-center px-5 border-r-hidden xl:border-gray-200 xl:border-r-2">
                     <div className='flex xl:flex-row flex-col justify-between items-center'>
                         <FaTag className="text-purple-500 text-5xl mb-3 mr-4" />
                         <h2 className="text-xl font-bold mb-2">Best Price</h2>
@@ -46,7 +46,7 @@ const Blog = () => {
                         BannerBuzz offers the industry's best prices while using only the highest
                     </p>
                 </div>
-                <div className="flex flex-col items-center text-center px-5 border-hidden xl:border-gray-200 xl:border-r-2">
+                <div className="flex flex-col items-center text-center px-5 xl:border-gray-200 xl:border-r-2">
                     <div className='flex xl:flex-row flex-col justify-between items-center'>
                         <FaPaintBrush className="text-purple-500 text-5xl mb-3 mr-4" />
                         <h2 className="text-xl font-bold mb-2">Free Design Proof</h2>

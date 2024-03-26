@@ -35,7 +35,7 @@ const Footer = () => {
     <footer className="bg-white text-gray-600">
       <div className="container mx-auto px-4 py-4 md:py-6 lg:px-6">
         <div className="flex flex-wrap -mx-4 justify-between items-start md:items-center">
-          <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col gap-3">
+          <div className="container px-5 py-8 mx-auto flex items-center xl:flex-row flex-col gap-3">
             <div className="max-w-sm mx-auto">
               {/* contact */}
               <div className="flex flex-col space-y-6">
@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-wrap sm:w-full">
+            <div className="flex flex-wrap xl:w-full">
               {/* Category */}
               <div className="sm:w-1/4 w-1/2">
                 <h2 className="title-font font-medium text-gray-900 tracking-widest text-xl mb-3">Category</h2>
