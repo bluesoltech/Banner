@@ -38,7 +38,7 @@ const Footer = () => {
           <div className="container px-5 py-8 mx-auto flex items-center xl:flex-row flex-col gap-3">
             <div className="max-w-sm mx-auto">
               {/* contact */}
-              <div className="flex flex-col space-y-6">
+              <div className="flex flex-col space-y-5">
                 <div className="flex items-center space-x-3 ">
                   <span className="text-2xl">📞</span>
                   <div>
